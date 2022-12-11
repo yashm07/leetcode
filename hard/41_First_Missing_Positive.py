@@ -6,9 +6,8 @@ class Solution:
             correct_index = nums[i]-1
             # check if value would fit in array
             # check if duplicate
-            # check if value is in right spot
             # check if value is positive
-            if nums[i] > 0 and nums[i] <= len(nums) and nums[i] != i+1 and nums[i] != nums[correct_index]:
+            if nums[i] > 0 and nums[i] <= len(nums) and nums[i] != nums[correct_index]:
                 nums[i], nums[correct_index] = nums[correct_index], nums[i]
             else:
                 i += 1
