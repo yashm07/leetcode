@@ -5,16 +5,20 @@
 #         self.next = None
 
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:    
+        # solved using slow and fast pointer
+        # O(n) time complexity, O(1) memory
         slow, fast = head, head
 
-        while fast != None and fast.next != None:
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-            
+
             if slow == fast:
                 return True
         
         return False
+
+        
         
 
